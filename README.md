@@ -15,8 +15,8 @@ The notebook aggregation function is process_taf_to_df, which aggregates functio
 
 It is also possible to use notebook Plot_ws_Taf to perform simple visualization of wind speed (but you can modify it based on the Series you want to plot).
 
-!['Visualize Ws'] (https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Ws_fcst.png)
+!['Visualize Ws'](https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Ws_fcst.png)
 
 You can also visualize gusts - this function can be usefull for minimal and maximal values.
 
-!['Visualize Ws with Gust'] (https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Ws_TAF_Gust.png)
+!['Visualize Ws with Gust'](https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Ws_TAF_Gust.png)
