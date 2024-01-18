@@ -25,4 +25,4 @@ You can also visualize gusts - this function can be usefull for minimal and maxi
 
 To get overall idea of how the TAF is decoded and BECMG groups are handeled since they posses short time periods but change forecast untill the next BECMG/FM change, following diagram can be used.
 
-!['Process of decoding'](https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Process.png)
+!['Process of decoding'](https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Process.PNG)
