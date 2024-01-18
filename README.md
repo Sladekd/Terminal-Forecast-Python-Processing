@@ -20,3 +20,9 @@ It is also possible to use notebook Plot_ws_Taf to perform simple visualization 
 You can also visualize gusts - this function can be usefull for minimal and maximal values.
 
 !['Visualize Ws with Gust'](https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Ws_TAF_Gust.png)
+
+## Procedure of decoding
+
+To get overall idea of how the TAF is decoded and BECMG groups are handeled since they posses short time periods but change forecast untill the next BECMG/FM change, following diagram can be used.
+
+!['Process of decoding'](https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/Process.png)
