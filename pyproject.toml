@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "taf-decoder"
+version = "0.1.0"
+description = "Decode aviation TAF (Terminal Aerodrome Forecast) reports into pandas DataFrames"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "David Sládek", email = "davslad@seznam.cz" }]
+requires-python = ">=3.9"
+dependencies = ["pandas>=1.4"]
+keywords = ["TAF", "aviation", "meteorology", "weather", "forecast", "METAR", "ICAO", "Ogimet", "pandas"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+test = ["pytest>=7", "pytest-cov", "hypothesis>=6"]
+dev = ["taf-decoder[plot,test]", "ruff", "mypy", "build", "twine"]
+
+[project.scripts]
+taf-decoder = "taf_decoder.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Sladekd/Terminal-Forecast-Python-Processing"
+Source = "https://github.com/Sladekd/Terminal-Forecast-Python-Processing"
+Issues = "https://github.com/Sladekd/Terminal-Forecast-Python-Processing/issues"
+Changelog = "https://github.com/Sladekd/Terminal-Forecast-Python-Processing/blob/main/CHANGELOG.md"
+Publication = "https://journals.vilniustech.lt/index.php/Aviation/article/view/21690"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/taf_decoder", "tests", "README.md", "LICENSE", "CHANGELOG.md", "CITATION.cff"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/taf_decoder"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+filterwarnings = ["error::FutureWarning", "error::SyntaxWarning"]
+
+[tool.coverage.run]
+source = ["taf_decoder"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "N", "C4", "PIE", "RUF"]
+ignore = ["UP006", "UP007", "UP035", "UP045", "S101", "RUF022", "RUF005"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S", "N802"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true
