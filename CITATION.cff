@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article below."
+title: "taf-decoder: decoding of aviation TAF forecasts"
+type: software
+authors:
+  - family-names: "Sládek"
+    given-names: "David"
+    email: "davslad@seznam.cz"
+license: MIT
+version: 0.1.0
+date-released: 2026-10-08
+repository-code: "https://github.com/Sladekd/Terminal-Forecast-Python-Processing"
+keywords:
+  - TAF
+  - aviation
+  - meteorology
+  - weather forecast verification
+preferred-citation:
+  type: article
+  title: "Analyses of European terminal aerodrome weather forecasts in 2022 and 2023"
+  authors:
+    - family-names: "Sládek"
+      given-names: "David"
+    - family-names: "Chalupníková"
+      given-names: "Blanka"
+    - family-names: "Schneidrová"
+      given-names: "Alžběta"
+    - family-names: "Roučková"
+      given-names: "Lenka"
+  journal: "Aviation"
+  volume: 28
+  issue: 2
+  start: 100
+  end: 114
+  year: 2024
+  doi: "10.3846/aviation.2024.21690"
